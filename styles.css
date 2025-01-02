@@ -1,0 +1,178 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f3f6fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Profile Section */
+.profile {
+    text-align: center;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin-bottom: 50px;
+    color: #fff;
+}
+
+.profile-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 6px solid #fff;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.profile h1 {
+    font-size: 28px;
+    margin: 10px 0;
+    color: #fff;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.profile p {
+    font-size: 18px;
+    margin: 5px 0 20px;
+    color: #f8f8f8;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Gallery Section */
+.gallery {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.gallery h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+.gallery .images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.gallery .images img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.gallery .images img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal img {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.modal .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal .close:hover {
+    color: #ccc;
+}
+
+/* Footer Section */
+.footer {
+    margin-top: 40px;
+    text-align: center;
+    padding: 20px;
+    background: #007bff;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .profile {
+        padding: 20px;
+    }
+
+    .gallery h2 {
+        font-size: 20px;
+    }
+
+    .footer {
+        font-size: 14px;
+    }
+}
+/* Profile Section */
+.profile {
+    text-align: center;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin-bottom: 50px;
+    color: #fff;
+}
+
+.profile-pic {
+    width: 200px; /* Adjust to desired size */
+    height: 200px; /* Ensures a perfect circle */
+    border-radius: 50%;
+    border: 6px solid #fff;
+    object-fit: cover; /* Ensures the image scales correctly */
+    object-position: center;
+    background-color: #0099ff; /* Fallback if image is missing */
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25); /* Adds a slight shadow */
+}
+.profile-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 6px solid #fff;
+    object-fit: contain; /* Ensure the entire image fits within the circle */
+    margin-bottom: 20px;
+    overflow: hidden; /* Hide anything outside the circle */
+    background-color: #fff; /* Add a background color for better visual contrast */
+}
