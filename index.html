@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Gallery</title>
+    <link rel="icon" type="image/x-icon" href="images/fnb.ico">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Profile Section -->
+        <div class="profile">
+            <img src="images/profile.jpg" alt="Profile Picture" class="profile-pic">
+            <h1>Rizki Diapari Harahap</h1>
+            <p>Food & Beverage Service</p>
+        </div>
+
+        <!-- Gallery Section -->
+        <div class="gallery">
+            <h2>My Reviews</h2>
+            <div class="images">
+                <img src="images/review1.jpeg" alt="Review 1">
+                <img src="images/review2.jpeg" alt="Review 2">
+                <img src="images/review3.jpeg" alt="Review 3">
+                <img src="images/review4.jpeg" alt="Review 4">
+                <img src="images/review5.jpeg" alt="Review 5">
+                <img src="images/review6.jpeg" alt="Review 6">
+                <img src="images/review7.jpeg" alt="Review 7">
+                <img src="images/review8.jpeg" alt="Review 8">
+                <img src="images/review9.jpeg" alt="Review 9">
+                <img src="images/review10.jpeg" alt="Review 10">
+                <img src="images/review11.jpeg" alt="Review 11">
+                <img src="images/review12.jpeg" alt="Review 12">
+            </div>
+        </div>
+
+        <!-- Footer Section -->
+        <div class="footer">
+            <p>&copy; 2025 Rizki Diapari Harahap. All rights reserved.</p>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modal-img">
+    </div>
+
+    <script>
+        // Modal script
+        const modal = document.getElementById('modal');
+        const modalImg = document.getElementById('modal-img');
+        const images = document.querySelectorAll('.gallery .images img');
+        const closeModal = document.querySelector('.close');
+
+        images.forEach(img => {
+            img.addEventListener('click', () => {
+                modal.style.display = 'flex';
+                modalImg.src = img.src;
+            });
+        });
+
+        closeModal.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
